@@ -1,0 +1,100 @@
+/* reset */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/******************* Utility Components ***********************/
+
+:root {
+    font-size: 62.5%;
+
+    /* custom properties */
+
+    /* colors */
+    --primary-color: white;
+    --secondary-color: black;
+    --tertiary-color: #D5C7A3;
+    --fourth-color: #A3D5D4;
+    --fourth-color-m: #c4edec;
+
+    /*fonts */
+    --primary-font:  'Fragment Mono', monospace;
+    --secondary-font: 'IBM Plex Mono', monospace;
+    --tertiary-font: 'Poppins', sans-serif;
+
+}
+
+body {
+    font-family: var(--primary-font); 
+    line-height: 1.8;
+    display: flex;
+}
+
+
+a {
+    font-family: var(--secondary-font);
+}
+
+/* -------- side nav --------- */
+
+aside#side-nav {
+    position: sticky;
+    top: 0;
+    left: 1vw; 
+    height: 100vh;
+}
+
+div.side-nav__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+}
+
+div.side-nav__content--logo img {
+    width: calc(5vw + 5vh);
+    object-fit: cover;
+}
+
+ul.side-nav__content--social {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4vw;
+    margin-bottom: 8vh;
+    padding-left: 0.7vw;
+    padding-right: 0.7vw;
+}
+
+.side-nav__content--social a {
+    text-decoration: none;
+    color: black;
+    border-left: 1px solid black;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    height: 6vh;
+    padding: 1rem;
+    transition: 0.1s linear border;
+    font-size: calc(0.2rem + 0.66667vw);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-nav__content--social a:hover {
+
+    color: black;
+ 
+    border: 1px solid black;
+}
