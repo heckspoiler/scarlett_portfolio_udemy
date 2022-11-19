@@ -36,8 +36,32 @@ body {
 }
 
 
-a {
+aside a {
     font-family: var(--secondary-font);
+}
+
+li {
+
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
+}
+
+
+a:visited {
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
 /* -------- side nav --------- */
@@ -68,13 +92,12 @@ ul.side-nav__content--social {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    
-    gap: 4vw;
+    justify-content: flex-end;   
+    gap: 2vw;
     margin-bottom: 8vh;
     padding-left: 0.7vw;
     padding-right: 0.7vw;
-    width: 8vw;
+    width: calc(3cw+3vh);
 
 }
 
@@ -85,9 +108,9 @@ ul.side-nav__content--social {
     border-right: 1px solid white;
     border-bottom: 1px solid white;
     border-top: 1px solid white;
-    height: 4vh;
+    height: 1vh;
     padding: 1rem;
-    font-size: calc(0.01rem + 0.66667vw);
+    font-size: calc(0.005rem + 0.4vw);
     box-sizing: border-box;
     text-align: center;
     padding-bottom: calc(2rem + 0.66667vw);
@@ -103,6 +126,81 @@ ul.side-nav__content--social {
     color: black;
     border: 1px solid black;
     background-color: var(--fourth-color-m);
+
+}
+
+/* -------- Main Content --------- */
+
+/* all content container => main element */
+
+main {
+    flex: 1;
+}
+
+#header {
+    font-family: var(--primary-font);
+    background-color: var(--tertiary-color);
+    height: calc(3vw + 3vh) !important;
+    z-index: 2;
+    margin-left: 1vw;
+}
+
+#header__main-nav {
+    height: 100%;
+}
+
+ul.header__main-nav--links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+ul.header__main-nav--links li {
+    padding-right: 3vw;
+}
+
+ul.header__main-nav--links li a {
+    position: relative; /* why do we put it position relative? because of the hover effect that we're going to add! */
+    padding: 0.4rem 0.6rem;
+    font-size: calc(1rem + 0.66667vw);
+}
+
+ul.header__main-nav--links li a:link::before,
+ul.header__main-nav--links li a:visited::before,
+ul.header__main-nav--links li a:link::after,
+ul.header__main-nav--links li a:visited::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 0.25rem;
+    background-color: white;
+
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
+
+}
+
+ul.header__main-nav--links li a:link::before,
+ul.header__main-nav--links li a:visited::before {
+    top: 0;
+    /* transform origin is center by default */
+    transform-origin: left;
+}
+
+ul.header__main-nav--links li a:link::after,
+ul.header__main-nav--links li a:visited::after {
+   bottom: 0;
+   transform-origin: right;
+}
+
+ul.header__main-nav--links li a:hover::before,
+ul.header__main-nav--links li a:active::before,
+ul.header__main-nav--links li a:hover::after,
+ul.header__main-nav--links li a:active::after {
+    transform: scaleX(1);
 
 }
 
