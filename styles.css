@@ -110,7 +110,7 @@ ul.side-nav__content--social {
     border-top: 1px solid white;
     height: 1vh;
     padding: 1rem;
-    font-size: calc(0.005rem + 0.4vw);
+    font-size: calc(0.05rem + 1vw);
     box-sizing: border-box;
     text-align: center;
     padding-bottom: calc(2rem + 0.66667vw);
@@ -136,6 +136,8 @@ ul.side-nav__content--social {
 main {
     flex: 1;
 }
+
+/* -------------------------- Main Nav -------------------------- */
 
 #header {
     font-family: var(--primary-font);
@@ -204,3 +206,30 @@ ul.header__main-nav--links li a:active::after {
 
 }
 
+/* ----------- Max Width 610px ------------ */
+
+@media screen and (max-width: 610px) {
+    /* -------------------------- Main Nav -------------------------- */
+    #header {
+        /*position: absolute;*/
+    }
+
+    nav#header__main-nav {
+        width: 30rem;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -60rem;
+        background-color: #c4edec;
+        text-align: center;
+    }
+
+    .header__main-nav--hamburger {
+        width: 5rem;
+        height: 5rem;
+        position: fixed;
+        top: 2rem;
+        right: 3rem;
+        cursor: pointer;
+    }
+}
