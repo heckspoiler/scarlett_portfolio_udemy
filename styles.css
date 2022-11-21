@@ -129,6 +129,29 @@ ul.side-nav__content--social {
 
 }
 
+.side-nav__content--social a:link::before,
+.side-nav__content--social a:visited::before,
+.side-nav__content--social a:link::after,
+.side-nav__content--social a:visited::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 0.25rem;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.side-nav__content--social a:link::before,
+.side-nav__content--social a:visited::before {
+    top: 0;
+    /* transform origin is center by default */
+    transform-origin: left;
+}
+
+
+
 /* -------- Main Content --------- */
 
 /* all content container => main element */
@@ -206,6 +229,48 @@ ul.header__main-nav--links li a:hover::after,
 ul.header__main-nav--links li a:active::after {
     transform: scaleX(1);
 
+}
+
+/* ___________ Showcase Hero Section ____________ */
+
+#showcase {
+    height: 100vh;
+    background-image: url(./img/dean_blunt/dean_blunt_asap_rocky.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.showcase__content {
+    background-color: var(--tertiary-color);
+    width: 20vw;
+    height: calc(8rem + 20vmax);
+    margin-left: 6vw;
+    padding: calc(1rem + 2vw);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.showcase__content--title {
+    font-size: calc(1rem + 2vw);
+    letter-spacing: 1rem;
+}
+
+.showcase__content--para {
+    font-family: var(--tertiary-font);
+    font-size: calc(0.5rem + 1vw);
+}
+
+.showcase__content--link {
+    
 }
 
 /* ----------- Max Width 610px ------------ */
@@ -317,3 +382,4 @@ ul.header__main-nav--links li a:active::after {
 
 
 }
+
