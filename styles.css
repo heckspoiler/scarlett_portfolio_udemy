@@ -33,6 +33,7 @@ body {
     font-family: var(--primary-font); 
     line-height: 1.8;
     display: flex;
+    background-color: black;
 }
 
 
@@ -71,6 +72,7 @@ aside#side-nav {
     top: 0;
     left: 1vw; 
     height: 100vh;
+    background-color: white;
 }
 
 div.side-nav__content {
@@ -115,8 +117,7 @@ ul.side-nav__content--social {
     text-align: center;
     padding-bottom: calc(2rem + 0.66667vw);
     transition: color 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), border 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
-
-
+    opacity: 0.2;
 
 }
 
@@ -126,6 +127,7 @@ ul.side-nav__content--social {
     color: black;
     border: 1px solid black;
     background-color: var(--fourth-color-m);
+    opacity: 1;
 
 }
 
@@ -141,7 +143,6 @@ main {
 
 #header {
     font-family: var(--primary-font);
-    background-color: var(--tertiary-color);
     height: calc(3vw + 3vh) !important;
     z-index: 2;
     margin-left: 1vw;
@@ -178,7 +179,7 @@ ul.header__main-nav--links li a:visited::after {
     width: 100%;
     left: 0;
     height: 0.25rem;
-    background-color: white;
+    background-color: var(--tertiary-color);
 
     transform: scaleX(0);
     transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
