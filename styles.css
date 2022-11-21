@@ -139,6 +139,8 @@ main {
 
 /* -------------------------- Main Nav -------------------------- */
 
+
+
 #header {
     font-family: var(--primary-font);
     height: calc(3vw + 3vh) !important;
@@ -210,8 +212,9 @@ ul.header__main-nav--links li a:active::after {
 
 @media screen and (max-width: 610px) {
     /* -------------------------- Main Nav -------------------------- */
-    #header {
-        /*position: absolute;*/
+   
+    header#header {
+        position: absolute;
     }
 
     nav#header__main-nav {
@@ -309,6 +312,7 @@ ul.header__main-nav--links li a:active::after {
 
     ul.header__main-nav--links li.fade {
         opacity: 1;
+
     }
 
 

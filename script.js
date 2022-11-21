@@ -1,6 +1,6 @@
 const hamburgerContainer = document.querySelector("#header__main-nav");
 const hamburger = document.querySelector(".header__main-nav--hamburger");
-const links = document.querySelectorAll("ul.header__main-nav--links");
+const links = document.querySelectorAll("ul.header__main-nav--links li");
 
 hamburger.addEventListener("click", () => {
   hamburgerContainer.classList.toggle("clicked");
