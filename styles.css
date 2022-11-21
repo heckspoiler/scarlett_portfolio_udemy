@@ -269,8 +269,34 @@ ul.header__main-nav--links li a:active::after {
     font-size: calc(0.5rem + 1vw);
 }
 
-.showcase__content--link {
-    
+.showcase__content--link:link,
+.showcase__content--link:visited {
+    padding: 1rem 0;
+    transition: all 0.5s ease-in-out;
+    width: 9rem;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+    position:relative;
+}
+
+.showcase__content--link:link::after,
+.showcase__content--link:visited::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--fourth-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.45s;
+}
+
+.showcase__content--link:hover::after,
+.showcase__content--link:active::after {
+    transform: scaleX(1);
 }
 
 /* ----------- Max Width 610px ------------ */
