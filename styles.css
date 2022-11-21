@@ -54,15 +54,13 @@ a:link{
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
-    -webkit-text-stroke-width: 0.5px;
-    -webkit-text-stroke-color: black;
+
 }
 
 
 a:visited {
-    color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
+    color: white
+
 }
 
 /* -------- side nav --------- */
@@ -146,6 +144,8 @@ main {
     height: calc(3vw + 3vh) !important;
     z-index: 2;
     margin-left: 1vw;
+    border-top: white solid 1px;
+    border-bottom: white solid 1px;
 }
 
 #header__main-nav {
@@ -179,8 +179,7 @@ ul.header__main-nav--links li a:visited::after {
     width: 100%;
     left: 0;
     height: 0.25rem;
-    background-color: var(--tertiary-color);
-
+    background-color: white;
     transform: scaleX(0);
     transition: transform 0.6s cubic-bezier(1, 0, 0, 1);
 
@@ -220,19 +219,25 @@ ul.header__main-nav--links li a:active::after {
         height: 100%;
         position: fixed;
         top: 0;
-        right: 0rem;
+        right: 100rem;
         background-color: #c4edec;
         text-align: center;
+    
+
+    }
+
+    .clicked {
+        left: 55%;
     }
 
     .header__main-nav--hamburger {
         width: 5rem;
         height: 5rem;
         position: fixed;
-        top: 2rem;
+        top: 4rem;
         right: 3rem;
         cursor: pointer;
-        background-color: #c4edec;
+        background-color: transparent;
         padding: 1rem;
         border-radius: 50%;
 
@@ -257,7 +262,54 @@ ul.header__main-nav--links li a:active::after {
     }
 
     ul.header__main-nav--links li {
+        width: auto;
         margin-bottom: 4vh;
         margin-left: 6vw;
     }
+
+    .clicked .line-1 {
+        transform: rotateZ(-45deg) translate(-0.8rem, 0.6rem)
+    }
+
+    .clicked .line-2 {
+        opacity: 0;
+    }
+
+    .clicked .line-3 {
+        transform: rotateZ(45deg) translate(-0.8rem, -0.6rem);
+    }
+
+    ul.header__main-nav--links li {
+        opacity: 0;
+    }
+
+    ul.header__main-nav--links li:nth-child(1) {
+        transition: all 0.5s ease-in-out 0.2s;
+    }
+
+    ul.header__main-nav--links li:nth-child(2) {
+        transition: all 0.5s ease-in-out 0.4s;
+    }
+
+    ul.header__main-nav--links li:nth-child(3) {
+        transition: all 0.5s ease-in-out 0.6s;
+    }
+
+    ul.header__main-nav--links li:nth-child(4) {
+        transition: all 0.5s ease-in-out 0.8s;
+    }
+
+    ul.header__main-nav--links li:nth-child(5) {
+        transition: all 0.5s ease-in-out 1s;
+    }
+
+    ul.header__main-nav--links li:nth-child(6) {
+        transition: all 0.5s ease-in-out 1.2s;
+    }
+
+    ul.header__main-nav--links li.fade {
+        opacity: 1;
+    }
+
+
 }
