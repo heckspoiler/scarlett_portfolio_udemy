@@ -344,18 +344,24 @@ section#work {
     justify-content: center;
 
     padding: 2rem;
-    background-color: var(--tertiary-color)
+    background-color: white
 }
 
 div.work__card {
     padding: 2rem; 
-    flex-basis: 40rem;
+    flex-basis: 30rem;
+    flex-grow: 1;
 }
 
 div.work__card img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    filter:grayscale(100%) blur(2px);
+}
+
+div.work__card img:hover {
+    filter: none;
 }
 
 
