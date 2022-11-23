@@ -23,14 +23,14 @@
     --fourth-color-m: #c4edec;
 
     /*fonts */
-    --primary-font:  'Fragment Mono', monospace;
+    --primary-font: 'Fragment Mono', monospace;
     --secondary-font: 'IBM Plex Mono', monospace;
     --tertiary-font: 'Poppins', sans-serif;
 
 }
 
 body {
-    font-family: var(--primary-font); 
+    font-family: var(--primary-font);
     line-height: 1.8;
     display: flex;
     background-color: black;
@@ -50,7 +50,7 @@ a {
     text-decoration: none;
 }
 
-a:link{
+a:link {
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
@@ -60,7 +60,6 @@ a:link{
 
 a:visited {
     color: white
-
 }
 
 /* -------- side nav --------- */
@@ -68,7 +67,7 @@ a:visited {
 aside#side-nav {
     position: sticky;
     top: 0;
-    left: 1vw; 
+    left: 1vw;
     height: 100vh;
     background-color: white;
 }
@@ -92,7 +91,7 @@ ul.side-nav__content--social {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;   
+    justify-content: flex-end;
     gap: 2vw;
     margin-bottom: 8vh;
     padding-left: 0.7vw;
@@ -116,7 +115,7 @@ ul.side-nav__content--social {
     padding-bottom: calc(2rem + 0.66667vw);
     transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), border 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
     opacity: 0.2;
-    
+
 
 }
 
@@ -128,7 +127,7 @@ ul.side-nav__content--social {
 
 .side-nav__content--social a:link::after,
 .side-nav__content--social a:visited::after {
-   
+
     position: absolute;
     top: 0;
     left: 0;
@@ -169,7 +168,7 @@ ul.side-nav__content--social {
 .side-nav__content--social a:active::after {
     transform: scaleX(1);
     transform-origin: left;
-    
+
 }
 
 
@@ -212,7 +211,8 @@ ul.header__main-nav--links li {
 }
 
 ul.header__main-nav--links li a {
-    position: relative; /* why do we put it position relative? because of the hover effect that we're going to add! */
+    position: relative;
+    /* why do we put it position relative? because of the hover effect that we're going to add! */
     padding: 0.4rem 0.6rem;
     font-size: calc(1rem + 0.66667vw);
 }
@@ -241,8 +241,8 @@ ul.header__main-nav--links li a:visited::before {
 
 ul.header__main-nav--links li a:link::after,
 ul.header__main-nav--links li a:visited::after {
-   bottom: 0;
-   transform-origin: right;
+    bottom: 0;
+    transform-origin: right;
 }
 
 ul.header__main-nav--links li a:hover::before,
@@ -261,7 +261,7 @@ ul.header__main-nav--links li a:active::after {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    
+
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -278,7 +278,7 @@ ul.header__main-nav--links li a:active::after {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+
     animation: hero 2s
 }
 
@@ -309,7 +309,7 @@ ul.header__main-nav--links li a:active::after {
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: 600;
-    position:relative;
+    position: relative;
     z-index: 1;
 }
 
@@ -327,7 +327,7 @@ ul.header__main-nav--links li a:active::after {
     transform-origin: right;
     transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: -1;
-    
+
 }
 
 .showcase__content--link:hover::after,
@@ -336,10 +336,10 @@ ul.header__main-nav--links li a:active::after {
     transform-origin: left;
 }
 
-/* --------- Work Section _________ */ 
+/* --------- Work Section _________ */
 
 section#work {
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
@@ -348,16 +348,30 @@ section#work {
 }
 
 div.work__card {
-    padding: 2rem; 
+    position: relative;
+    display: flex;
+    padding: 2rem;
     flex-basis: 30rem;
     flex-grow: 1;
+    
 }
 
 div.work__card img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    filter:grayscale(100%) blur(2px);
+    filter: grayscale(100%) blur(2px);
+}
+
+div.work__card h3{
+    position: absolute;
+    font-size: 4rem;
+    color: red;
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 div.work__card img:hover {
@@ -377,7 +391,7 @@ div.work__card img:hover {
 
 @media screen and (max-width: 610px) {
     /* -------------------------- Main Nav -------------------------- */
-   
+
     header#header {
         position: absolute;
     }
@@ -390,7 +404,7 @@ div.work__card img:hover {
         right: 100rem;
         background-color: #c4edec;
         text-align: center;
-    
+
 
     }
 
@@ -486,4 +500,3 @@ div.work__card img:hover {
 
 
 }
-
