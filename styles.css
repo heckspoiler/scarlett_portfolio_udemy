@@ -114,42 +114,63 @@ ul.side-nav__content--social {
     box-sizing: border-box;
     text-align: center;
     padding-bottom: calc(2rem + 0.66667vw);
-    transition: background-color 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), border 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1), border 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
     opacity: 0.2;
+    
 
 }
 
-.side-nav__content--social a:hover, 
-.side-nav__content--social a:active  {
-
-    color: black;
-    border: 1px solid black;
-    background-color: var(--fourth-color-m);
+.side-nav__content--social a:hover {
     opacity: 1;
-
+    border-right: 1px solid black;
+    border-left: 1px solid transparent;
 }
 
-.side-nav__content--social a:link::before,
-.side-nav__content--social a:visited::before,
 .side-nav__content--social a:link::after,
 .side-nav__content--social a:visited::after {
-    content: '';
+   
     position: absolute;
-    width: 100%;
-    left: 0;
-    height: 0.25rem;
-    background-color: white;
-    transform: scaleX(0);
-    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.side-nav__content--social a:link::before,
-.side-nav__content--social a:visited::before {
     top: 0;
-    /* transform origin is center by default */
-    transform-origin: left;
+    left: 0;
+    height: calc(3vw + 3vh);
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.45s;
+
 }
 
+.side-nav__content--social a:nth-child(1):link::after,
+.side-nav__content--social a:nth-child(1):visited::after {
+    content: "𓆏";
+}
+
+.side-nav__content--social a:nth-child(2):link::after,
+.side-nav__content--social a:nth-child(2):visited::after {
+    content: "(づ｡◕‿‿◕｡)づ";
+}
+
+.side-nav__content--social a:nth-child(3):link::after,
+.side-nav__content--social a:nth-child(3):visited::after {
+    content: "𒐫";
+}
+
+.side-nav__content--social a:nth-child(4):link::after,
+.side-nav__content--social a:nth-child(4):visited::after {
+    content: "y̴̧̢͔̥̦̪̩̺̱̾̇̽̈́̅͒̌̉o̷̡̨̪͚̥͓̍̿͐̐͜͝û̵̖̜͇̦̰͠ d̷͇̆̇̌̓̊̔͝ï̶̢̥͓̣̼̬̖͕̀̚͘ḍ̴̠͙̱̝͙͍͇̰̉̍̈́́̿̒ñ̴̖̗̾̿͘t̵̲̰̗̰̬̓͒͊͂͑̾ s̸̢̧̡͔̤̙͇̱͌h̵̛̗̼̥̰͖͓̿͗͊̆̊͗̌͜o̵̥̖͔͔͉͈͗̈̀̂̑̓ẁ̶̧̡̪̭̦͕̍̇͛̌̂̂͆͜ m̵̫̘̺̪̭̽͛̿̿̀̎̄̐ͅȅ̸̢̧̫̺͙̠̙̩͙̓͐͘r̶͖̔͑͌̾c̴̪̲̤͇̆̋͌̓̅̋̚͝͝y̷̘͓̗͔̺̮̫͇͗̕ͅ ť̸̯̈́͂̈̈́̀͗͒̓͑ơ̶̧̨̭̥͉̳̘̪ b̵͎͎̘̘̞͍̦̩̰͖̎̿̀͑̒̑̆͑̚å̴̼͙̠̩̰͉͙̃͊̍̈́͠c̸̛̭͖̟̦͖̜̉̀̋̐̏ȍ̴̪̦͚̪͖̲̖͋̊͑͑n̴̜͔͕̱͖̦͈̂̎̐̍s̵̡̧̛̪̖̼̫̰̲̀̓̈́̉̀̃ t̶̳̓̌͒̎͊̄̃̽h̵̨̛͕͈̟͈̝̝͕̻͛͋̅̈́̎̐́͐͘ͅì̷̧̧̛̦̬̳̬͊̏̀̀̀̓n̴̛̮̯͇͆͑̏̂̍͐́̕͠k̶̡̃̎͐̐͂̈̏̏͘͘ t̵͔͔͕̾̄̏͋̓͐̂͂h̴̝͈͚͗̒͗ë̴̼͕̯̭̳́̀̓̀͝y̵̳̱̙̹͔̿̔̐̃͑̋̿͝ͅ à̵̢̤̖͚̦͍͙̞̦̒̃͑̿̓́r̶̢̨̖̺̬̓̇ẽ̴̩͚͓̙̣̙̫̏͂̎̊  t̷̢̢̹̫͈̺̜̯̥̀ö̸̙̙̤̟̻̯̰̟́̿̐̈́͛̋͘͠ ş̵͈̥̳̖̉͛̉͊̋͒h̶͓̻̤̬͙̟̣̫̰̊̾͒́̀̏̾̋͌͜o̶̧͔̪̘̳̱̼̫͝w̴̙̟̺͕̮̙̗͈͑̆ ṁ̸͉̠̟͔̞̺̌̓̒̿͛̿͜͠ȅ̸̮̊r̵̝̹͕͈̋̈́͋͆̑̔̚͜ç̵̯̺̗͓͒͑̓͊̈́̽̀̉̆y̴͔̣͇͕̞͙̖̫͊̈́̈́͑͐̽ͅ ṱ̸̻̙̘̎o̷̧͕̞͔̮̔͆͐̃͐ y̴̛̙̙̦̗̼̠̞͚̱̮̍̓̽͋̔̏̋̂o̴̧͇͉͇͈̮̙̭̯͇̓̍̿͠ủ̶͚̗͖̗̩͇̞̀͂̉̈́̇͝͝?̴͚͈̖͋̓̓ ' :̶̨̡̛͙̲̟̫̠̄̆̍͊̉̆̍D ¯\_(ツ)_/¯";
+}
+
+.side-nav__content--social a:nth-child(5):link::after,
+.side-nav__content--social a:nth-child(5):visited::after {
+    content: "‧̍̊˙· 𓆝.° ｡˚𓆛˚｡ °.𓆞 ·˙‧̍̊";
+}
+
+.side-nav__content--social a:hover::after,
+.side-nav__content--social a:active::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    
+}
 
 
 /* -------- Main Content --------- */
@@ -253,11 +274,19 @@ ul.header__main-nav--links li a:active::after {
     height: calc(8rem + 20vmax);
     margin-left: 6vw;
     padding: calc(1rem + 2vw);
-
+    opacity: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     
+    animation: hero 2s
+}
+
+@keyframes hero {
+    0% {
+        transform: translate(100rem);
+        opacity: 0%;
+    }
 }
 
 .showcase__content--title {
@@ -279,6 +308,7 @@ ul.header__main-nav--links li a:active::after {
     font-size: 1.5rem;
     font-weight: 600;
     position:relative;
+    z-index: 1;
 }
 
 .showcase__content--link:link::after,
@@ -290,14 +320,18 @@ ul.header__main-nav--links li a:active::after {
     height: 100%;
     width: 100%;
     background-color: var(--fourth-color);
+    border: 1px solid black;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 0.45s;
+    transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: -1;
+    
 }
 
 .showcase__content--link:hover::after,
 .showcase__content--link:active::after {
     transform: scaleX(1);
+    transform-origin: left;
 }
 
 /* ----------- Max Width 610px ------------ */
