@@ -284,9 +284,11 @@ ul.header__main-nav--links li a:active::after {
 
 @keyframes hero {
     0% {
-        transform: translate(100rem);
+        transform: translateY(-100rem);
         opacity: 0%;
+        z-index: -2;
     }
+
 }
 
 .showcase__content--title {
@@ -332,6 +334,15 @@ ul.header__main-nav--links li a:active::after {
 .showcase__content--link:active::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+
+/* ----------- Max Width 900px ------------ */
+
+@media screen and (max-width: 900px) {
+    section#showcase {
+        background-position: 100%;
+    }
 }
 
 /* ----------- Max Width 610px ------------ */
@@ -439,6 +450,10 @@ ul.header__main-nav--links li a:active::after {
     ul.header__main-nav--links li.fade {
         opacity: 1;
 
+    }
+
+    section#showcase {
+        background-position: 80%;
     }
 
 
