@@ -188,7 +188,7 @@ main {
 #header {
     font-family: var(--primary-font);
     height: calc(3vw + 3vh) !important;
-    z-index: 2;
+    z-index: 5;
     margin-left: 1vw;
     border-top: white solid 1px;
     border-bottom: white solid 1px;
@@ -226,7 +226,7 @@ ul.header__main-nav--links li a:visited::after {
     width: 100%;
     left: 0;
     height: 0.25rem;
-    background-color: pink;
+    background-color: white;
     transform: scaleX(0);
     transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
@@ -334,6 +334,28 @@ ul.header__main-nav--links li a:active::after {
 .showcase__content--link:active::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+/* --------- Work Section _________ */ 
+
+section#work {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 2rem;
+    background-color: var(--tertiary-color)
+}
+
+div.work__card {
+    padding: 2rem; 
+    flex-basis: 40rem;
+}
+
+div.work__card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 
