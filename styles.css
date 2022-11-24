@@ -364,6 +364,8 @@ div.work__card img {
 }
 
 div.work__card h3{
+    display: block;
+    visibility: hidden;
     position: absolute;
     font-size: 4rem;
     color: red;
@@ -373,6 +375,9 @@ div.work__card h3{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
+
 
 div.work__card img:hover {
     filter: none;
