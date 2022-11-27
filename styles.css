@@ -361,24 +361,32 @@ div.work__card img {
     width: 100%;
     object-fit: cover;
     filter: grayscale(100%) blur(2px);
+    transition: transform 0.2s ease-in-out;
 }
 
-div.work__card h3{
-    display: block;
-    visibility: hidden;
+.work__card h3{
+    display: none;
     position: absolute;
     font-size: 4rem;
-    color: red;
+    color: white;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: var(--fourth-color);
     z-index: 1000;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: display 0.2s ease-in-out;
 }
-
 
 div.work__card img:hover {
     filter: none;
+    transform: scale(1.1);
+
+}
+
+.work__card:hover h3 {
+    display: block;
 }
 
 
