@@ -487,6 +487,14 @@ section#about-me {
     transform-origin: top;
 }
 
+
+/* ----------------- Services Section --------------- */
+
+#services {
+    background-color: white;
+    padding: 2rem;
+}
+
 /* ----------- Max Width 900px ------------ */
 
 @media screen and (max-width: 900px) {
