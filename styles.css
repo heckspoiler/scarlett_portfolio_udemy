@@ -274,13 +274,15 @@ ul.header__main-nav--links li a:active::after {
     height: calc(8rem + 20vmax);
     margin-left: 6vw;
     padding: calc(1rem + 2vw);
-    opacity: 90%;
+    opacity: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     animation: hero 2s
 }
+
+/* makes the hero-section slide in from the top */
 
 @keyframes hero {
     0% {
@@ -293,7 +295,8 @@ ul.header__main-nav--links li a:active::after {
 
 .showcase__content--title {
     font-size: calc(1rem + 2vw);
-    letter-spacing: 1rem;
+    letter-spacing: 0.5vw;
+    text-transform: uppercase;
 }
 
 .showcase__content--para {
@@ -307,10 +310,12 @@ ul.header__main-nav--links li a:active::after {
     transition: all 0.5s ease-in-out;
     width: 9rem;
     text-transform: uppercase;
+    text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
     position: relative;
     z-index: 1;
+
 }
 
 .showcase__content--link:link::after,
@@ -322,11 +327,11 @@ ul.header__main-nav--links li a:active::after {
     height: 100%;
     width: 100%;
     background-color: var(--fourth-color);
-    border: 1px solid black;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform 0.45s cubic-bezier(0.075, 0.82, 0.165, 1);
     z-index: -1;
+
 
 }
 
@@ -342,9 +347,9 @@ section#work {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
     padding: 2rem;
-    background-color: white
+    background-color: white;
+
 }
 
 div.work__card {
@@ -353,10 +358,11 @@ div.work__card {
     padding: 2rem;
     flex-basis: 30rem;
     flex-grow: 1;
-    
+
 }
 
 div.work__card img {
+
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -364,7 +370,7 @@ div.work__card img {
     transition: transform 0.2s ease-in-out;
 }
 
-.work__card h3{
+.work__card h3 {
     display: none;
     position: absolute;
     font-size: 4rem;
@@ -399,11 +405,13 @@ section#about-me {
     background-color: var(--fourth-color);
 }
 
-.about-me__img, .about-me__content {
+.about-me__img,
+.about-me__content {
     flex-basis: 40rem;
     padding: 2rem;
     flex-grow: 1;
 }
+
 .about-me__img img {
     width: 100%;
     height: 100%;
@@ -414,11 +422,13 @@ section#about-me {
     font-size: 4rem;
     padding: 1rem;
     position: relative;
+    /* why relative? it's because of the line below the title. It's an ::after pseudo-element and that's why position has to be relative */
 }
 
 .about-me__content--title:after {
     content: '';
-    position:absolute;
+    position: absolute;
+    /* positioned absolute in relation to content--title */
     bottom: 0;
     left: 0;
     height: 0.3rem;
@@ -430,6 +440,7 @@ section#about-me {
 .about-me__content p {
     margin-bottom: 4rem;
     letter-spacing: 0.2rem;
+    /* we choose both title and p to make sure that the same margin is applied to both of the elements. That way it looks clean. */
 }
 
 
