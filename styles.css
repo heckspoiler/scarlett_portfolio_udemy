@@ -503,9 +503,11 @@ section#about-me {
 
 }
 
+/* --------------- service section ------------------- */ 
+
 .service svg {
-    width: 8%;
-    height: 8%;
+    width: 7%;
+    height: 7%;
 }
 
 .service {
@@ -673,5 +675,23 @@ section#about-me {
         background-position: 80%;
     }
 
+    /* --------------- service section ------------------- */ 
+
+    section#services {
+        padding: 6rem 3rem 2rem;
+    }
+
+    .service {
+        padding: calc(1rem + 2vw);
+        margin: 0 0 calc(1rem + 2vw);
+    }
+
+    .services--title {
+        font-size: calc(1.2rem + 2vw);
+    }
+
+    .service--para {
+        font-size: calc(0.8rem + 1.5vw);
+    }
 
 }
