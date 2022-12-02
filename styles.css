@@ -18,9 +18,9 @@
     /* colors */
     --primary-color: white;
     --secondary-color: black;
-    --tertiary-color: #c3c1b9;
+    --tertiary-color: #D5C7A3;
     --fourth-color: #A3D5D4;
-    --fourth-color-m: #c4edec;
+    --fourth-color-m: #6facab;
 
     /*fonts */
     --primary-font: 'Fragment Mono', monospace;
@@ -504,8 +504,8 @@ section#about-me {
 }
 
 .service svg {
-    width: 4%;
-    height: 4%;
+    width: 8%;
+    height: 8%;
 }
 
 .service {
@@ -513,9 +513,27 @@ section#about-me {
     margin: 0 2rem 4rem;
     flex-basis: 40rem;
     flex-grow: 1;
-    background-color: var(--tertiary-color);
+    background-color: var(--fourth-color-m);
     position: relative;
     z-index: 1;
+}
+
+.service h3 {
+    position: relative;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.service h3::after {
+    content: '';
+    position: absolute;
+    top: 2.7rem;
+    left: 0;
+    height: 0.2rem;
+    width: 50%;
+    transform: scaleX(0.5);
+    background-color: white;
 }
 
 .service::after {
