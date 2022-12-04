@@ -18,7 +18,7 @@
     /* colors */
     --primary-color: white;
     --secondary-color: black;
-    --tertiary-color: #D5C7A3;
+    --tertiary-color: transparent;
     --fourth-color: #A3D5D4;
     --fourth-color-m: #6facab;
 
@@ -555,6 +555,25 @@ section#about-me {
 .service:active::after {
     transform: scaleX(1);
 } 
+
+/* --------------- Skill Section ------------------- */ 
+
+section#skills {
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: calc(1rem + 2vw);
+}
+
+.skills__desing,
+.skills__coding {
+    padding: calc(1rem + 2vw);
+    text-transform: uppercase;
+    flex-basis: 40rem;
+    flex-grow: 1;
+}
 
 /* ----------- Max Width 900px ------------ */
 
