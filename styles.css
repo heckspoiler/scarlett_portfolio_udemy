@@ -367,7 +367,7 @@ div.work__card img {
   position: absolute;
   font-size: 4rem;
   color: white;
-  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--fourth-color);
   z-index: 1000;
   position: absolute;
@@ -375,6 +375,7 @@ div.work__card img {
   left: 50%;
   transform: translate(-50%, -50%);
   transition: display 0.2s ease-in-out;
+  font-family: var(--secondary-font);
 }
 
 div.work__card img:hover {
@@ -412,6 +413,7 @@ section#about-me {
   font-size: 4rem;
   padding: 1rem;
   position: relative;
+  color: white;
   /* why relative? it's because of the line below the title. It's an ::after pseudo-element and that's why position has to be relative */
 }
 
