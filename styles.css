@@ -177,6 +177,7 @@ main {
   margin-left: 1vw;
   border-top: white solid 1px;
   border-bottom: white solid 1px;
+  background-color: black;
 }
 
 #header__main-nav {
@@ -571,15 +572,130 @@ section#skills {
 .skills__coding--progress span {
   position: relative;
   display: inline-block;
-  vertical-align: center;
+  vertical-align: middle;
   height: 2rem;
-  background-color: red;
-  width: 40rem;
-  border: 1px solid red;
-  z-index: 1;
+  background-color: var(--fourth-color-m);
+  border-radius: 3rem;
 }
 
 .skills_design--progress__1 {
+  animation: design-1 4s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.skills_design--progress__2 {
+  animation: design-2 4s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.skills_design--progress__3 {
+  animation: design-3 4s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.skills_design--progress__4 {
+  animation: design-4 4s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+@keyframes design-1 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes design-2 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes design-3 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes design-4 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 65%;
+  }
+}
+
+.skills_coding--progress__1 {
+  animation: coding-1 4s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.skills_coding--progress__2 {
+  animation: coding-2 4s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.skills_coding--progress__3 {
+  animation: coding-3 4s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.skills_coding--progress__4 {
+  animation: coding-4 4s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+@keyframes coding-1 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes coding-2 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes coding-3 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes coding-4 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 45%;
+  }
+}
+
+/* ----------- Min Width 1510px ------------ */
+
+@media screen and (min-width: 1510px) {
+  body {
+    width: 1510px;
+    margin: auto;
+    background-color: white;
+  }
 }
 
 /* ----------- Max Width 900px ------------ */
@@ -708,11 +824,17 @@ section#skills {
     margin: 0 0 calc(1rem + 2vw);
   }
 
-  .services--title {
+  .services--title,
+  .skills__desing--title,
+  .skills__coding--title {
     font-size: calc(1.2rem + 2vw);
   }
 
-  .service--para {
+  .service--para,
+  .skills__desing h4,
+  .skills__coding h4 {
     font-size: calc(0.8rem + 1.5vw);
   }
+
+  /* --------------- Skill Section ------------------- */
 }
