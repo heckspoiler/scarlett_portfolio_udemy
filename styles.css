@@ -10,6 +10,21 @@
 
 /******************* Utility Components ***********************/
 
+@font-face {
+  font-family: "Archivo";
+  src: url("./fonts/archivo.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nagoda";
+  src: url("./fonts/nagoda.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Wolkerjuiced";
+  src: url("./fonts/wolkerjuiced.ttf") format("truetype");
+}
+
 :root {
   font-size: 62.5%;
 
@@ -23,9 +38,9 @@
   --fourth-color-m: #6facab;
 
   /*fonts */
-  --primary-font: "Fragment Mono", monospace;
-  --secondary-font: "IBM Plex Mono", monospace;
-  --tertiary-font: "Poppins", sans-serif;
+  --primary-font: "Wolkerjuiced", monospace;
+  --secondary-font: "Archivo", monospace;
+  --tertiary-font: "Naogda", sans-serif;
 }
 
 body {
@@ -284,6 +299,7 @@ ul.header__main-nav--links li a:active::after {
 .showcase__content--para {
   font-family: var(--tertiary-font);
   font-size: calc(0.5rem + 1vw);
+  color: var(--fourth-color);
 }
 
 .showcase__content--link:link,
@@ -419,6 +435,7 @@ section#about-me {
 
 .about-me__content p {
   font-size: 1.2rem;
+  font-family: var(--secondary-font);
 }
 
 .about-me__content--link:link,
@@ -478,6 +495,7 @@ section#about-me {
 .service svg {
   width: 7%;
   height: 7%;
+  fill: white;
 }
 
 .service {
@@ -488,6 +506,7 @@ section#about-me {
   background-color: var(--fourth-color-m);
   position: relative;
   z-index: 1;
+  border-radius: 3rem;
 }
 
 .service h3 {
@@ -495,6 +514,7 @@ section#about-me {
   font-size: 1.5rem;
   margin-top: 1.5rem;
   margin-bottom: 2rem;
+  color: white;
 }
 
 .service h3::after {
@@ -526,6 +546,15 @@ section#about-me {
   transform: scaleX(1);
 }
 
+.services--para {
+  font-family: var(--secondary-font);
+  width: 80%;
+
+  margin: 0 auto;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
 /* --------------- Skill Section ------------------- */
 
 section#skills {
@@ -555,6 +584,7 @@ section#skills {
 .skills__coding h4 {
   font-size: 1.5rem;
   color: var(--secondary-color);
+  font-family: var(--tertiary-font);
 }
 
 .skills__design--progress,
