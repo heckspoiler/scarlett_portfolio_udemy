@@ -728,6 +728,7 @@ section#testimonials {
   flex-wrap: wrap;
   padding: calc(1rem + 2vw);
   background-color: white;
+  width: 50%;
 }
 
 .testimonials__card--img {
