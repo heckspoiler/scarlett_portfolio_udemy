@@ -47,7 +47,6 @@ body {
   font-family: var(--primary-font);
   line-height: 1.8;
   display: flex;
-  background-color: black;
 }
 
 aside a {
@@ -718,6 +717,43 @@ section#skills {
   100% {
     width: 45%;
   }
+}
+
+/* ------- TESTIMONIALS SECTION ------ */
+
+section#testimonials {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: calc(1rem + 2vw);
+  background-color: white;
+}
+
+.testimonials__card--img {
+  height: 30rem;
+  width: 30rem;
+
+  background-repeat: no-repeat;
+
+  background-position: center;
+  background-size: 110%;
+}
+
+.img-1 {
+  background-image: url(./img/testimonials/testimonial-2.png);
+}
+
+.img-2 {
+  background-image: url(./img/testimonials/testimonial-1.jpeg);
+}
+
+.img-3 {
+  background-image: url(./img/testimonials/testimonial-3.jpeg);
+}
+
+.img-4 {
+  background-image: url(./img/testimonials/testimonial-4.png);
 }
 
 /* ----------- Min Width 1510px ------------ */
